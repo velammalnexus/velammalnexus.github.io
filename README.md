@@ -4,6 +4,7 @@ Velammal Nexus currently operates 13 Schools with over 2100 staff &amp; over 350
 <head>
 </head>
 <body>
+<center></center>
 Hello world
 Hello world
 </body>
