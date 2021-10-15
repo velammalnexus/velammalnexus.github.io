@@ -416,6 +416,24 @@
       </div>
     </div>
   </div> <!-- .page-section -->
+	  
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	  
+	  <script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/19431/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
 
   <div class="page-section">
     <div class="container">
@@ -424,15 +442,19 @@
       <form class="main-form">
         <div class="row mt-5 ">
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
+		  <label>Full name</label>
             <input type="text" class="form-control" placeholder="Full name">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+		  <label>Email</label>
             <input type="text" class="form-control" placeholder="Email address..">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
+		  <label>Date</label>
             <input type="date" class="form-control">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+		  <label>Grade</label>
             <select name="departement" id="departement" class="custom-select">
               <option value="general">grade</option>
               <option value="cardiology">Grade 1</option>
@@ -451,7 +473,7 @@
           </div>
         
 
-        <button type="submit" class="btn btn-primary mt-3 wow zoomIn">Submit Request</button>
+        <button type="submit" class="btn btn-primary mt-3 wow zoomIn" onclick="SubForm()">Submit Request</button>
       </form>
     </div>
   </div> <!-- .page-section -->
