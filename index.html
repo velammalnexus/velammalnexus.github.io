@@ -617,6 +617,32 @@ function SubForm (){
 	  
 	  <div class="scrollbar" id="style-15">
       <div class="force-overflow"></div>
+	
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alan Example</title>
+</head>
+
+<body>
+<div class="alan-btn"></div>
+
+<script type="text/javascript"
+ src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+<script>
+  var alanBtnInstance = alanBtn({
+    key: "8151bb9266005e6e043b1ed19d4db36d2e956eca572e1d8b807a3e2338fdd0dc/stage",
+    onCommand: function (commandData) {
+      if (commandData.command === "go:back") {
+        //call client code that will react on the received command
+      }
+    },
+    rootEl: document.getElementById("alan-btn"),
+  });
+</script>
+</body>
+</html>
     
   
 </body>
